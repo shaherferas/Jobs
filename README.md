@@ -42,7 +42,7 @@ You need to design and implement an API for managing job entries using PHP. The 
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-repo/job-management-api.git
+   git clone https://github.com/shaherferas/Jobs.git
    cd job-management-api
    
 2. **Install Dependencies**:
