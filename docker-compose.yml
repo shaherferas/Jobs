@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/var/www
+        ports:
+            - "8000:80"
+        networks:
+            - app-network
+
+    mysql:
+        image: mysql:5.7
+        container_name: db
+        environment:
+            MYSQL_ROOT_PASSWORD: 'root'
+            MYSQL_USER: 'jobs'
+            MYSQL_PASS: 'password'
+        ports:
+            - "3306:3306"
+        networks:
+            - app-network
+
+    rabbitmq:
+        image: rabbitmq:3-management
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        networks:
+            - app-network
+
+networks:
+    app-network:
+        driver: bridge

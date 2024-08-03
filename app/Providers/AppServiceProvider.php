@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Providers;
+
+use App\Services\JobService;
+use App\Services\UserService;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        $this->app->singleton(JobService::class, function ($app) {
+            return new JobService();
+        });
+        $this->app->singleton(UserService::class, function ($app) {
+            return new UserService();
+        });
+    }
+
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+    {
+        //
+    }
+}
