@@ -43,7 +43,7 @@ You need to design and implement an API for managing job entries using PHP. The 
 
    ```bash
    git clone https://github.com/shaherferas/Jobs.git
-   cd job-management-api
+   cd jobs
    
 2. **Install Dependencies**:
    ```bash
