@@ -76,6 +76,10 @@ You need to design and implement an API for managing job entries using PHP. The 
    ```bash
    php artisan l5-swagger:generate
 
+7. **Running Unit Tests**:
+   ```bash
+   php artisan test
+
 ## Custom Requests and Services
 - Custom Requests: Added to controllers for validation.
 - Services: **JobService** and **UserService** for business logic.
