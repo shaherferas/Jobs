@@ -62,7 +62,16 @@ You need to design and implement an API for managing job entries using PHP. The 
         DB_USERNAME='root'
         DB_PASSWORD='root'
   ```
-
+   
+  - Ensure the following variables are set for RabbitMQ:
+   ```bash
+      RABBITMQ_HOST=127.0.0.1
+      RABBITMQ_PORT=5672
+      RABBITMQ_USER=guest
+      RABBITMQ_PASSWORD=guest
+      RABBITMQ_QUEUE=default
+      RABBITMQ_VHOST=/
+    ```
 4. **Docker Setup: Build and run the Docker containers**:
    ```bash
     docker-compose up --build
